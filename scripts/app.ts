@@ -129,9 +129,9 @@ const app: App = {
   },
 
   listenToActions() {
+    document.addEventListener("keydown", app.handlePressKey);
     for (const key of app.keys) {
       key.addEventListener("mousedown", app.handleClick);
-      document.addEventListener("keydown", app.handlePressKey);
     }
   },
 

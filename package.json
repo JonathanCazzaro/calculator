@@ -1,10 +1,10 @@
 {
-  "name": "TypeScript basic calculator",
+  "name": "TypeScript-basic-calculator",
   "version": "1.0.0",
   "source": "index.html",
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build"
+    "build": "parcel build --public-url ./"
   },
   "targets": {
     "default": {
