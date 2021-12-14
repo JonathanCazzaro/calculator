@@ -1,7 +1,21 @@
 {
-  "name": "CALCULATOR",
+  "name": "TypeScript basic calculator",
   "version": "1.0.0",
-  "main": "index.js",
+  "source": "index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "targets": {
+    "default": {
+      "distDir": "./dist"
+    }
+  },
+  "browserslist": "defaults",
   "author": "Jonathan Cazzaro <jonathan.cazzaro@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.1",
+    "parcel": "^2.0.1"
+  }
 }

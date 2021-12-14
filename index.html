@@ -5,39 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.scss" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Unica+One&display=swap"
       rel="stylesheet"
     />
-    <script src="./scripts/app.js" defer></script>
+    <script src="./scripts/app.ts" defer></script>
     <title>Calculator</title>
   </head>
   <body>
     <div class="calculator">
       <div class="calculator__screen">
-        <p class="calculator__screen--upperline">12 ×</p>
-        <p class="calculator__screen--mainline">48.2</p>
+        <p class="calculator__screen--upperline"></p>
+        <p class="calculator__screen--mainline">0</p>
       </div>
       <div class="calculator__keyboard">
         <button type="button" class="calculator__keyboard__key operator" data-key="+">+</button>
-        <button type="button" class="calculator__keyboard__key operator" data-key="−">−</button>
-        <button type="button" class="calculator__keyboard__key operator" data-key="×">×</button>
-        <button type="button" class="calculator__keyboard__key operator" data-key="÷">÷</button>
+        <button type="button" class="calculator__keyboard__key operator" data-key="-">−</button>
+        <button type="button" class="calculator__keyboard__key operator" data-key="*">×</button>
+        <button type="button" class="calculator__keyboard__key operator" data-key="/">÷</button>
         <button type="button" class="calculator__keyboard__key" data-key="7">7</button>
         <button type="button" class="calculator__keyboard__key" data-key="8">8</button>
         <button type="button" class="calculator__keyboard__key" data-key="9">9</button>
-        <button type="button" class="calculator__keyboard__key reset" data-key="AC">AC</button>
+        <button type="button" class="calculator__keyboard__key reset" data-key="Delete">AC</button>
         <button type="button" class="calculator__keyboard__key" data-key="4">4</button>
         <button type="button" class="calculator__keyboard__key" data-key="5">5</button>
         <button type="button" class="calculator__keyboard__key" data-key="6">6</button>
-        <button type="button" class="calculator__keyboard__key delete" data-key="C">C</button>
+        <button type="button" class="calculator__keyboard__key delete" data-key="Backspace">C</button>
         <button type="button" class="calculator__keyboard__key" data-key="1">1</button>
         <button type="button" class="calculator__keyboard__key" data-key="2">2</button>
         <button type="button" class="calculator__keyboard__key" data-key="3">3</button>
-        <button type="button" class="calculator__keyboard__key equal" data-key="=">=</button>
+        <button type="button" class="calculator__keyboard__key equal" data-key="Enter">=</button>
         <button type="button" class="calculator__keyboard__key" data-key="0">0</button>
         <button type="button" class="calculator__keyboard__key" data-key=".">.</button>
       </div>

@@ -60,6 +60,7 @@ body {
 
 .calculator__screen {
   text-align: right;
+  overflow-x: hidden;
   padding: 1rem;
   border-radius: 0.3rem;
   background-color: $color-screen-background;
@@ -69,11 +70,12 @@ body {
   letter-spacing: 0.1rem;
   text-shadow: 0.1rem 0.1rem 0.1rem green;
   border-radius: 0.8rem;
-  box-shadow: 0 0 .35rem $color-screen-background;
+  box-shadow: 0 0 0.35rem $color-screen-background;
   border: solid 0.5rem $color-screen-border;
 
   &--upperline {
     padding-bottom: 0.5rem;
+    height: 1.5rem;
   }
   &--mainline {
     font-size: 2.2rem;
@@ -85,44 +87,52 @@ body {
   display: grid;
   grid-template-columns: repeat(4, auto);
   text-align: center;
-  color: $color-keys-numerals;
   justify-content: center;
-  gap: .5rem .5rem;
+  gap: 0.5rem 0.5rem;
 
   &__key {
     display: inline-block;
     font-family: $font-keyboard;
     font-size: 1.5rem;
     font-weight: bold;
+    color: $color-keys-operators;
+    cursor: pointer;
     user-select: none;
     width: 4.2rem;
     line-height: 3.5rem;
     background-color: $color-keys-numeralsbackground;
-    border-radius: .4rem;
-    border: .15rem solid $color-app-background;
-    box-shadow: 0 .20rem .1rem $color-app-background;
+    border-radius: 0.4rem;
+    border: 0.15rem solid $color-app-background;
+    box-shadow: 0 0.2rem 0.1rem $color-app-background;
     &.equal {
       grid-row: 4 / 6;
       grid-column: 4 / 5;
       line-height: 7rem;
     }
 
-    &.operator, &.equal {
-        background-color: $color-keys-operators;
-        color: $color-keys-numeralsbackground;
+    &.operator,
+    &.equal {
+      background-color: $color-keys-operators;
+      color: $color-keys-numeralsbackground;
     }
 
-    &.delete, &.reset {
-        background-color: $color-keys-removal;
-        color: $color-keys-numerals;
+    &.delete,
+    &.reset {
+      background-color: $color-keys-removal;
+      color: $color-keys-numerals;
     }
 
     &[data-key="0"] {
-        grid-column: 2 / 3;
+      grid-column: 2 / 3;
     }
 
     &[data-key="."] {
-        grid-column: 3 / 4;
+      grid-column: 3 / 4;
     }
   }
+}
+
+.pressed {
+  box-shadow: 0 0.1rem 0.1rem $color-app-background;
+  transform: translateY(.1rem) scale(.98);
 }
