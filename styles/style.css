@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Rounded Elegance";
+  src: url("../assets/fonts/RoundedElegance-Regular.eot");
+  src: url("../assets/fonts/RoundedElegance-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/RoundedElegance-Regular.woff2") format("woff2"), url("../assets/fonts/RoundedElegance-Regular.woff") format("woff"), url("../assets/fonts/RoundedElegance-Regular.ttf") format("truetype"), url("../assets/fonts/RoundedElegance-Regular.svg#RoundedElegance-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LED Calculator";
+  src: url("../assets/fonts/LEDCalculator.eot");
+  src: url("../assets/fonts/LEDCalculator.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/LEDCalculator.woff2") format("woff2"), url("../assets/fonts/LEDCalculator.woff") format("woff"), url("../assets/fonts/LEDCalculator.ttf") format("truetype"), url("../assets/fonts/LEDCalculator.svg#LEDCalculator") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: #46414b;
+  padding: 2rem;
+}
+
+.calculator {
+  margin: auto;
+  padding: 1rem;
+  width: 19rem;
+  height: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #6c6466;
+  border: 1rem solid #292929;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0 0 1.5rem #223333;
+          box-shadow: 0 0 1.5rem #223333;
+}
+
+.calculator__screen {
+  text-align: right;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  background-color: #272d2e;
+  font-family: "LED Calculator", sans-serif;
+  color: #4fc24f;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem green;
+  border-radius: 0.8rem;
+  -webkit-box-shadow: 0 0 0.35rem #272d2e;
+          box-shadow: 0 0 0.35rem #272d2e;
+  border: solid 0.5rem #9b9b7a;
+}
+
+.calculator__screen--upperline {
+  padding-bottom: 0.5rem;
+}
+
+.calculator__screen--mainline {
+  font-size: 2.2rem;
+  letter-spacing: 0.2rem;
+}
+
+.calculator__keyboard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  text-align: center;
+  color: #e3d1bc;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .5rem .5rem;
+}
+
+.calculator__keyboard__key {
+  display: inline-block;
+  font-family: "Rounded Elegance", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 4.2rem;
+  line-height: 3.5rem;
+  background-color: #968985;
+  border-radius: .4rem;
+  border: 0.15rem solid #46414b;
+  -webkit-box-shadow: 0 0.2rem 0.1rem #46414b;
+          box-shadow: 0 0.2rem 0.1rem #46414b;
+}
+
+.calculator__keyboard__key.equal {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  grid-row: 4 / 6;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / 5;
+  line-height: 7rem;
+}
+
+.calculator__keyboard__key.operator, .calculator__keyboard__key.equal {
+  background-color: #292929;
+  color: #968985;
+}
+
+.calculator__keyboard__key.delete, .calculator__keyboard__key.reset {
+  background-color: #9b362b;
+  color: #e3d1bc;
+}
+
+.calculator__keyboard__key[data-key="0"] {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.calculator__keyboard__key[data-key="."] {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+/*# sourceMappingURL=style.css.map */

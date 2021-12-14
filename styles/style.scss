@@ -1,0 +1,128 @@
+$color-app-background: #46414b;
+$color-calculator-background: #6c6466;
+$color-screen-background: #272d2e;
+$color-screen-content: rgb(79, 194, 79);
+$color-screen-border: #9b9b7a;
+$color-keys-numeralsbackground: #968985;
+$color-keys-operators: rgb(41, 41, 41);
+$color-keys-removal: #9b362b;
+$color-keys-numerals: #e3d1bc;
+$font-keyboard: "Rounded Elegance", sans-serif;
+$font-screen: "LED Calculator", sans-serif;
+
+@font-face {
+  font-family: "Rounded Elegance";
+  src: url("../assets/fonts/RoundedElegance-Regular.eot");
+  src: url("../assets/fonts/RoundedElegance-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/RoundedElegance-Regular.woff2") format("woff2"),
+    url("../assets/fonts/RoundedElegance-Regular.woff") format("woff"),
+    url("../assets/fonts/RoundedElegance-Regular.ttf") format("truetype"),
+    url("../assets/fonts/RoundedElegance-Regular.svg#RoundedElegance-Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LED Calculator";
+  src: url("../assets/fonts/LEDCalculator.eot");
+  src: url("../assets/fonts/LEDCalculator.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/LEDCalculator.woff2") format("woff2"),
+    url("../assets/fonts/LEDCalculator.woff") format("woff"),
+    url("../assets/fonts/LEDCalculator.ttf") format("truetype"),
+    url("../assets/fonts/LEDCalculator.svg#LEDCalculator") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: $color-app-background;
+  padding: 2rem;
+}
+
+.calculator {
+  margin: auto;
+  padding: 1rem;
+  width: 19rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: $color-calculator-background;
+  border: 1rem solid rgb(41, 41, 41);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 1.5rem rgb(34, 51, 51);
+}
+
+.calculator__screen {
+  text-align: right;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  background-color: $color-screen-background;
+  font-family: $font-screen;
+  color: $color-screen-content;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem green;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 .35rem $color-screen-background;
+  border: solid 0.5rem $color-screen-border;
+
+  &--upperline {
+    padding-bottom: 0.5rem;
+  }
+  &--mainline {
+    font-size: 2.2rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+.calculator__keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  text-align: center;
+  color: $color-keys-numerals;
+  justify-content: center;
+  gap: .5rem .5rem;
+
+  &__key {
+    display: inline-block;
+    font-family: $font-keyboard;
+    font-size: 1.5rem;
+    font-weight: bold;
+    user-select: none;
+    width: 4.2rem;
+    line-height: 3.5rem;
+    background-color: $color-keys-numeralsbackground;
+    border-radius: .4rem;
+    border: .15rem solid $color-app-background;
+    box-shadow: 0 .20rem .1rem $color-app-background;
+    &.equal {
+      grid-row: 4 / 6;
+      grid-column: 4 / 5;
+      line-height: 7rem;
+    }
+
+    &.operator, &.equal {
+        background-color: $color-keys-operators;
+        color: $color-keys-numeralsbackground;
+    }
+
+    &.delete, &.reset {
+        background-color: $color-keys-removal;
+        color: $color-keys-numerals;
+    }
+
+    &[data-key="0"] {
+        grid-column: 2 / 3;
+    }
+
+    &[data-key="."] {
+        grid-column: 3 / 4;
+    }
+  }
+}

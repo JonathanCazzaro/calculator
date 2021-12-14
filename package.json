@@ -1,0 +1,7 @@
+{
+  "name": "CALCULATOR",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jonathan Cazzaro <jonathan.cazzaro@gmail.com>",
+  "license": "MIT"
+}
